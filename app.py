@@ -4,7 +4,7 @@ import find
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/' , methods=['GET'])
+@app.route('/' , methods=['GET' , 'POST'])
 def index():
     return "use :- /amazon?url=<url>"
 
