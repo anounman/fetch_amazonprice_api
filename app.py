@@ -11,7 +11,18 @@ def index():
 @app.route('/amazon', methods=['GET', 'POST'])
 def amazon():
     url = request.args.get('url')
-    title , data =  find.get_data(url)
-    return jsonify({'title':title , 'data':data})
+    state = request.args.get('html')
+    if (state == None):
+        state = False
+    title , data , review , img , about , short_desc =  find.get_data(url , state)
+    return jsonify({
+        'title':title , 
+        "img": img ,  
+        'data':data , 
+        "review": review , 
+        "about": about,
+        "short_desc" : short_desc
+    
+    })
 
 app.run(debug=True)
