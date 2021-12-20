@@ -39,7 +39,7 @@ def get_data(url , state=False):
             pass
         except Exception() as e:
             pass
-        if pr   ice and title != None:
+        if price and title != None:
             title = str(title)
             title = title.replace('<span class="a-size-large product-title-word-break" id="productTitle">' , '')
             title = title.replace('</span>' , '')
@@ -50,6 +50,4 @@ def get_data(url , state=False):
             about = str(about)
             short_desc = str(short_desc)
             about = about.replace('\n' , '')
-            return title , price , review , img , about , short_desc
-
-            
+            return title , price , review , img , about , short_desc    

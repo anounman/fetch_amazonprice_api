@@ -2,9 +2,9 @@ from flask import Flask , request , jsonify
 from flask_cors import CORS
 import find
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
-@app.route('/' , methods=['GET' , 'POST'])
+@app.route('/' ,)
 def index():
     return "use :- /amazon?url=<url>"
 
@@ -24,5 +24,5 @@ def amazon():
         "short_desc" : short_desc
     
     })
-
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
