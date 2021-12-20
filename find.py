@@ -50,4 +50,4 @@ def get_data(url , state=False):
             about = str(about)
             short_desc = str(short_desc)
             about = about.replace('\n' , '')
-            return title , price , review , img , about , short_desc    
+            return str(title) , str(price) , str(review) , str(img) , str(about) , str(short_desc)    
