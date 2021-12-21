@@ -76,7 +76,7 @@ def get_data(url , state=False):
                 about = str(about)
                 short_desc = str(short_desc)
                 about = about.replace('\n' , '')
-                return str(title) , str(price) , str(review) , str(img) , str(about) , str(short_desc)    
+                return (title) , (price) , (review) , (img) , (about) , (short_desc)    
     except Exception as e:
             print("Error=>"+str(e))
             pass
