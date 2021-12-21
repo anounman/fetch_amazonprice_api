@@ -4,7 +4,6 @@ import requests
 
 def get_data(url , state=False):
     try:
-        print("Find App .py")
         header = {
             "User-Agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'}
 
@@ -52,7 +51,8 @@ def get_data(url , state=False):
                 about = str(about)
                 short_desc = str(short_desc)
                 about = about.replace('\n' , '')
-                return str(title) , str(price) , str(review) , str(img) , str(about) , str(short_desc)    
+                data = {'title':title , 'price':price , 'img':img , 'review':review , 'about':about , 'short_desc':short_desc}
+                return data
     except Exception as e:
             print("Error=>"+str(e))
             pass
