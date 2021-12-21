@@ -15,6 +15,6 @@ def amazon():
     if (state == None):
         state = False
     data =  find.get_data(url , state)
-    return data 
+    return jsonify(data) 
 if __name__ == '__main__':
     app.run(debug=True)
