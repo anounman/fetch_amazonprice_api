@@ -15,7 +15,7 @@ def amazon():
     state = request.args.get('html')
     if (state == None):
         state = False
-    title , data , review , img , about , short_desc =  find.get_data(url , state)
+    title , data , review , img , about , short_desc =  get_data(url , state)
     return jsonify({
         'title':str(title) , 
         "img": str(img) ,  
